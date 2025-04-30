@@ -41,7 +41,7 @@ if uploaded_file:
         with torch.no_grad():
             pred = model(img).squeeze().numpy()
             denorm_pred = (pred * stds.values) + means.values
-        result = dict(zip(target_names, pred.round(2)))
+        result = dict(zip(target_names, denorm_pred.round(2)))
     
     st.success("Estimated Nutrition Values:")
     st.table(result)
