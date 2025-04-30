@@ -3,7 +3,7 @@ import torch
 from PIL import Image
 import torchvision.transforms as transforms
 import pandas as pd
-from nutrition_model import MultiViewNutritionModel
+from model import MultiViewNutritionModel
 
 # Load mean/std for de-normalization
 means = pd.read_csv("means.csv", index_col=0).squeeze()
@@ -17,7 +17,7 @@ model.eval()
 
 # Define transform
 transform = transforms.Compose([
-    transforms.Resize((224, 224)),
+    transforms.Resize((128, 128)),
     transforms.ToTensor(),
     transforms.Normalize(mean=[0.485, 0.456, 0.406],
                          std=[0.229, 0.224, 0.225])
