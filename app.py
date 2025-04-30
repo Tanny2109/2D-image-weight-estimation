@@ -12,7 +12,7 @@ stds = pd.read_csv("stds.csv", index_col=0).squeeze()
 # Load model
 device = torch.device('cpu')
 model = MultiViewNutritionModel(output_dim=12, freeze_backbone=True)
-model.load_state_dict(torch.load('best_model.pth', map_location=device))
+model.load_state_dict(torch.load('chkpt_1.pth', map_location=device))
 model.eval()
 
 # Define transform
