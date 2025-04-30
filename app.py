@@ -35,7 +35,9 @@ if uploaded_file:
     st.image(image, caption="Uploaded Image", use_column_width=True)
     
     with st.spinner('Estimating...'):
-        img = transform(image).unsqueeze(0).unsqueeze(0)  # [1, 1, 3, 224, 224]
+        img = transform(image).unsqueeze(0)               # [1, 3, 128, 128]
+        img = img.repeat(37, 1, 1, 1)                      # [37, 3, 128, 128]
+        img = img.unsqueeze(0)                             # [1, 37, 3, 128, 128]
         with torch.no_grad():
             pred = model(img).squeeze().numpy()
             denorm_pred = (pred * stds.values) + means.values
