@@ -40,7 +40,7 @@ if uploaded_file:
         img = img.unsqueeze(0)                             # [1, 37, 3, 128, 128]
         with torch.no_grad():
             pred = model(img).squeeze().numpy()
-            # denorm_pred = (pred * stds.values) + means.values
+            denorm_pred = (pred * stds.values) + means.values
         result = dict(zip(target_names, pred.round(2)))
     
     st.success("Estimated Nutrition Values:")
