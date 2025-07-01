@@ -1,3 +1,6 @@
+
+[![Run Streamlit App](https://img.shields.io/badge/Run%20Streamlit%20App-37a779?style=for-the-badge)]([https://your-streamlit-app-url.streamlit.app/](https://weight-estimation.streamlit.app/))
+
 ## 2D Image Weight Estimation
 
 This website uses 2D images captured from any device like a mobile phone, etc to predict weight of the food item along with other information like calories, fat, carbs, protein, calcium, iron.
