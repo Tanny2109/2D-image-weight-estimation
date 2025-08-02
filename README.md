@@ -1,5 +1,5 @@
 
-[![Run Streamlit App](https://img.shields.io/badge/Run%20Streamlit%20App-37a779?style=for-the-badge)]([https://your-streamlit-app-url.streamlit.app/](https://weight-estimation.streamlit.app/))
+[![Run Streamlit App](https://img.shields.io/badge/Run%20Streamlit%20App-37a779?style=for-the-badge)](https://weight-estimation.streamlit.app/))
 
 ## 2D Image Weight Estimation
 
